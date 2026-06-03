@@ -73,7 +73,7 @@ export default function CityCanvas({ onBuildingClick, onCursorBig }: CityCanvasP
 
       {/* Hint */}
       <div
-        className="absolute bottom-[5.5%] left-1/2 -translate-x-1/2 text-[0.6rem] sm:text-[0.72rem] text-white/50 tracking-[0.15em] sm:tracking-[0.18em] uppercase z-[5] pointer-events-none text-center leading-[1.6] px-4 max-w-xs"
+        className="absolute bottom-[5.5%] left-1/2 -translate-x-1/2 text-[0.55rem] sm:text-[0.72rem] text-white/60 tracking-[0.15em] sm:tracking-[0.18em] uppercase z-[5] pointer-events-none text-center leading-[1.5] px-4 max-w-xs font-medium"
         style={{ animation: "fadeUp 0.8s 1.2s both", opacity: 0 }}
       >
         Move cursor to shift the sky

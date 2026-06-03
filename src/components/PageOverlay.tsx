@@ -47,9 +47,9 @@ export default function PageOverlay({ activePage, onClose, onHoverInteractive }:
         className="relative z-10 h-full overflow-y-auto overscroll-contain page-scroll"
       >
         {/* Back button */}
-        <div className="sticky top-0 z-10 bg-cream/90 backdrop-blur-[8px] border-b border-b-sand/50">
+        <div className="sticky top-0 z-10 bg-cream/95 backdrop-blur-md border-b border-sand/30">
           <button
-            className="flex items-center gap-[0.6rem] px-4 sm:px-7 py-3 sm:py-4 text-[0.7rem] sm:text-[0.75rem] font-mono tracking-[0.12em] uppercase text-muted transition-colors duration-200 cursor-none hover:text-terracotta w-full text-left"
+            className="flex items-center gap-2 sm:gap-[0.6rem] px-3 sm:px-7 py-3 sm:py-4 text-[0.65rem] sm:text-[0.75rem] font-mono tracking-[0.12em] uppercase text-muted hover:text-terracotta transition-colors duration-300 cursor-none w-full text-left font-medium"
             onClick={onClose}
             onMouseEnter={() => onHoverInteractive(true)}
             onMouseLeave={() => onHoverInteractive(false)}
@@ -62,17 +62,17 @@ export default function PageOverlay({ activePage, onClose, onHoverInteractive }:
         </div>
 
         {/* Page title */}
-        <div className="pt-8 sm:pt-12 pb-4 px-4 sm:px-8 max-w-[960px] mx-auto">
-          <div className="text-[0.65rem] sm:text-[0.68rem] tracking-[0.25em] uppercase text-sand mb-2 font-mono">
+        <div className="pt-6 sm:pt-12 pb-3 sm:pb-4 px-4 sm:px-8 max-w-[960px] mx-auto border-b border-sand/20">
+          <div className="text-[0.6rem] sm:text-[0.68rem] tracking-[0.25em] uppercase text-sand/70 mb-2 font-mono font-medium">
             {page?.label}
           </div>
-          <div className="font-lora text-[clamp(1.8rem,5vw,3.8rem)] font-bold text-ink leading-[1.1]">
+          <div className="font-lora text-[clamp(1.6rem,5vw,3.8rem)] font-bold text-ink leading-[1.1]">
             {page?.title}
           </div>
         </div>
 
         {/* Page content */}
-        <div className="px-4 sm:px-8 pb-20 max-w-[960px] mx-auto">
+        <div className="px-4 sm:px-8 pb-20 max-w-[960px] mx-auto pt-6 sm:pt-8">
           {Component && <Component />}
         </div>
       </div>

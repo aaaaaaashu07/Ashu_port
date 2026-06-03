@@ -79,6 +79,25 @@ html, body {
 
 .page-scroll::-webkit-scrollbar { width: 4px; }
 .page-scroll::-webkit-scrollbar-track { background: transparent; }
-.page-scroll::-webkit-scrollbar-thumb { background: var(--sand); border-radius: 4px; }
+.page-scroll::-webkit-scrollbar-thumb { background: var(--sand); border-radius: 4px; transition: background 0.3s; }
+.page-scroll::-webkit-scrollbar-thumb:hover { background: var(--terracotta); }
 
 canvas { display: block; }
+
+/* Smooth transitions for mobile */
+@media (max-width: 768px) {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  button, a {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  
+  @supports (backdrop-filter: blur(10px)) {
+    .backdrop-blur-md {
+      backdrop-filter: blur(10px);
+    }
+  }
+}
