@@ -9,9 +9,9 @@ export default function AboutPage() {
   ];
 
   return (
-    <div className="fade-in grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-14 items-start mt-10">
+    <div className="fade-in grid grid-cols-1 md:grid-cols-[1.4fr_1fr] gap-8 sm:gap-10 md:gap-14 items-start mt-6 sm:mt-10">
       <div>
-        <p className="text-base leading-[1.9] text-espresso mb-5">
+        <p className="text-sm sm:text-base leading-[1.8] sm:leading-[1.9] text-espresso mb-4 sm:mb-5">
           I&apos;m a Computer Engineering diploma student at{" "}
           <strong className="text-ink">Sanjivani KBP Polytechnic, Kopargaon</strong> with a 94%
           aggregate. I specialize in <strong className="text-ink">Edge AI, TinyML, and full-stack systems</strong> — building intelligent hardware that works offline, real-time computer vision pipelines, and platforms that solve real-world problems.

@@ -8,7 +8,7 @@ const TAG_CLASSES: Record<string, string> = {
 
 export default function ProjectsPage() {
   return (
-    <div className="fade-in grid grid-cols-[repeat(auto-fill,minmax(270px,1fr))] gap-[1.4rem] mt-8">
+    <div className="fade-in grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[repeat(auto-fill,minmax(270px,1fr))] gap-4 sm:gap-5 md:gap-[1.4rem] mt-6 sm:mt-8">
       {PROJECTS.map((p) => (
         <div
           key={p.title}
@@ -16,9 +16,9 @@ export default function ProjectsPage() {
         >
           <div className="h-[5px]" style={{ background: p.accent }} />
           <div className="p-[1.35rem]">
-            <div className="font-lora text-[1.1rem] font-bold text-ink mb-[0.25rem]">{p.title}</div>
-            <div className="text-[0.73rem] text-muted tracking-[0.05em] mb-[0.65rem] font-mono">{p.sub}</div>
-            <div className="text-[0.87rem] leading-[1.7] text-espresso mb-[0.9rem]">{p.desc}</div>
+            <div className="font-lora text-[0.95rem] sm:text-[1.1rem] font-bold text-ink mb-[0.25rem]">{p.title}</div>
+            <div className="text-[0.68rem] sm:text-[0.73rem] text-muted tracking-[0.05em] mb-[0.65rem] font-mono">{p.sub}</div>
+            <div className="text-[0.8rem] sm:text-[0.87rem] leading-[1.6] sm:leading-[1.7] text-espresso mb-[0.9rem]">{p.desc}</div>
             <div className="flex flex-wrap gap-[0.35rem]">
               {p.tags.map((t) => (
                 <span

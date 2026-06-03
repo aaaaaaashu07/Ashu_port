@@ -30,6 +30,14 @@ html, body {
   background: #111;
 }
 
+@media (max-width: 768px) {
+  html, body {
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-touch-callout: none;
+  }
+}
+
 #custom-cursor {
   position: fixed;
   width: 10px;

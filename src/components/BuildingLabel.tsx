@@ -13,9 +13,9 @@ export default function BuildingLabel({ building, canvasHeight }: BuildingLabelP
 
   return (
     <div
-      className="pointer-events-none fixed z-[8] font-lora text-[0.82rem] font-semibold whitespace-nowrap rounded-full px-[0.9rem] py-[0.35rem] transition-opacity duration-200"
+      className="pointer-events-none fixed z-[8] font-lora text-[0.7rem] sm:text-[0.82rem] font-semibold whitespace-nowrap rounded-full px-[0.7rem] sm:px-[0.9rem] py-[0.3rem] sm:py-[0.35rem] transition-opacity duration-200"
       style={{
-        left: building.x + building.w / 2,
+        left: Math.max(60, Math.min(window.innerWidth - 60, building.x + building.w / 2)),
         top: topPx,
         transform: "translateX(-50%) translateY(-100%)",
         background: "rgba(250,247,242,0.93)",

@@ -49,7 +49,7 @@ export default function PageOverlay({ activePage, onClose, onHoverInteractive }:
         {/* Back button */}
         <div className="sticky top-0 z-10 bg-cream/90 backdrop-blur-[8px] border-b border-b-sand/50">
           <button
-            className="flex items-center gap-[0.6rem] px-7 py-4 text-[0.75rem] font-mono tracking-[0.12em] uppercase text-muted transition-colors duration-200 cursor-none hover:text-terracotta w-full text-left"
+            className="flex items-center gap-[0.6rem] px-4 sm:px-7 py-3 sm:py-4 text-[0.7rem] sm:text-[0.75rem] font-mono tracking-[0.12em] uppercase text-muted transition-colors duration-200 cursor-none hover:text-terracotta w-full text-left"
             onClick={onClose}
             onMouseEnter={() => onHoverInteractive(true)}
             onMouseLeave={() => onHoverInteractive(false)}
@@ -62,17 +62,17 @@ export default function PageOverlay({ activePage, onClose, onHoverInteractive }:
         </div>
 
         {/* Page title */}
-        <div className="pt-12 pb-4 px-8 max-w-[960px] mx-auto">
-          <div className="text-[0.68rem] tracking-[0.25em] uppercase text-sand mb-2 font-mono">
+        <div className="pt-8 sm:pt-12 pb-4 px-4 sm:px-8 max-w-[960px] mx-auto">
+          <div className="text-[0.65rem] sm:text-[0.68rem] tracking-[0.25em] uppercase text-sand mb-2 font-mono">
             {page?.label}
           </div>
-          <div className="font-lora text-[clamp(2.2rem,5vw,3.8rem)] font-bold text-ink leading-[1.1]">
+          <div className="font-lora text-[clamp(1.8rem,5vw,3.8rem)] font-bold text-ink leading-[1.1]">
             {page?.title}
           </div>
         </div>
 
         {/* Page content */}
-        <div className="px-8 pb-20 max-w-[960px] mx-auto">
+        <div className="px-4 sm:px-8 pb-20 max-w-[960px] mx-auto">
           {Component && <Component />}
         </div>
       </div>
